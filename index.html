@@ -7,86 +7,58 @@
     <title>Library</title>
     <link rel="icon" type="imagen/x-icon" href="images/bicycle.svg">
     <link rel="stylesheet" href="style.css">
+    
     <!-- bootstraps links -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <style>
-      body{ margin-left: 100px;}
-      li { list-style:none; }
-      li { display:inline-block; }
-      div { background-color:pink; }
-      div { width:150px; }
-      form{
-        display: flex;
-        flex-direction: column;
-      }
-      input{
-        width: 200px;
-      }
-      button{
-        width: 100px;
-        #display{ width: 500px;}
-      }
-    </style>
-  </head>
-  <body>
-  <h2>Library</h2>
-  <br>
-  <h2> DISPLAY OBJECTS INSIDE ARRAY:</h2>
-  <div id="display"><p id="demoobject"></p></div>
-  <br>
-  <form onsubmit="event.preventDefault();" id="myForm">
-    <label for="Tittle">tittle</label>
-    <input id="tittle" type="input" required>
-    <label for="Author">author</label>
-    <input id="author" type="input" required>
-    <label for="tittle1">pages</label>
-    <input id="pages" type="input" required>
-    <label for="Read">read</label>
-    <input id="read" type="input" required  |>
+</head>
+<body>
+  <article>
+    <h2>Library</h2>
     <br>
-    <button onclick="Book()">Add</button>
-  </form>
-  <br>
-  <h2> Array with Object</h2>
-  <p id="demoarray"></p>
-  
-  
-  <script>
-    
-    let myLibrary = [];//read inputs and add to the new object and array the real code library!
-    
-    function protobook(tittle, author, pages, read) {
-      this.tittle = tittle
-      this.author = author
-      this.pages = pages
-      this.read = read
-    }
-  
-    function Book() {
-      // the constructor...
-      let tittle = document.getElementById('tittle').value;
-      let author = document.getElementById('author').value;
-      let pages = document.getElementById('pages').value;
-      let read = document.getElementById('read').value; 
-     
-      const newbook = new protobook(tittle, author, pages, read); 
-      myLibrary.push(newbook);
-      document.getElementById("demoarray").innerHTML = myLibrary.length;
-      fLen = myLibrary.length;
-      
-      for (let i = 0; i < fLen; i++) {
-      
-      }
-        text = "<ul>";
-        for (let x in newbook) { 
-          text += "<li>" + "<div>" + newbook[x] + " " + "</div>" + "</li>";
-        }
-        text += "</ul>";
-        document.getElementById("demoobject").innerHTML = text;
-        document.getElementById("myForm").reset();
-    }// end function Book
-  </script>
-  
-  </body>
-  </html>
+    <h2> DISPLAY OBJECTS INSIDE ARRAY:</h2>
+    <br>
+    <p id="demoobject"></p>
+    <br>
+    <form onsubmit="event.preventDefault();" id="myForm">
+      <label for="Tittle">tittle</label>
+      <input id="tittle" type="input" required>
+      <label for="Author">author</label>
+      <input id="author" type="input" required>
+      <label for="tittle1">pages</label>
+      <input id="pages" type="input" required>
+      <label for="Read">read</label>
+      <input id="read" type="input" required  |>
+      <br>
+      <button onclick="Book()">Add</button>
+    </form>
+    <br>
+    <h2>ARRAY LENGTH:</h2>
+    <br>
+    <p id="lenarray"></p>
+    <br>
+  </article> 
+  <script src="main.js"></script>
+</body>
+</html>
+
+<!-- <ul>
+  <li>
+    <ul>
+      <li>a</li>
+      <li>b</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li></li>
+      <li></li>
+    </ul>
+  </li>
+</ul> -->
