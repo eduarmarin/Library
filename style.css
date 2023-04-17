@@ -1,18 +1,41 @@
 body{
   width: 100%;
 }
-article { 
+nav{
+  margin-left: 200px;
+  width: 700px;
+  background-color: bisque;
+}
+.container { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
   margin-left: 100px;
   width: 700px;
+  background-color: aquamarine;
+}
+.table{
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  background-color: yellowgreen;
 }
 li { 
   list-style:none; 
   display:inline-block; 
+  margin: 0px;
 }
-div { 
-  background-color:pink; 
+.cell { 
+  background-color:lightcyan; 
   min-width:150px; 
   border: 1px solid gray;
+  margin: 0px;
+  padding: 0px;
+}
+.datas{
+  width: 300px;
 }
 form{
   display: flex;
