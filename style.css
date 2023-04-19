@@ -1,18 +1,23 @@
 body{
   width: 100%;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+.general{
+  width: 80%;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
 }
 nav{
-  margin-left: 200px;
-  width: 700px;
+  width: 100%;
   background-color: bisque;
 }
 .container { 
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* align-items: center; */
-  margin-left: 100px;
-  width: 700px;
+  min-width: 100%;
   background-color: aquamarine;
 }
 .table{
@@ -26,6 +31,15 @@ li {
   list-style:none; 
   display:inline-block; 
   margin: 0px;
+  gap: 0px;
+}
+.outul{
+  list-style:none; 
+  background-color: brown;
+  padding: 0;
+}
+.outli{
+  background-color: blue;
 }
 .cell { 
   background-color:lightcyan; 
@@ -33,9 +47,11 @@ li {
   border: 1px solid gray;
   margin: 0px;
   padding: 0px;
+  gap: 0px;
 }
 .datas{
   width: 300px;
+  margin-left: 10px;
 }
 form{
   display: flex;
