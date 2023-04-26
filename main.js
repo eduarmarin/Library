@@ -40,20 +40,25 @@ function deletebook(){
   }
 }
 function showData () {
-  text = '<ul class="outul">';  
+  text = '<div class="divcell">' + '<ul class="outul">';  
   for (let i = 0; i < myLibrary.length; i++) {// this loop and the next inside put the information to display it
-    text += '<li class="outli">' + '<ul class="insideul">';
+    text += '<li class="outli">' + '<ul class="inul">';
     for (let x in myLibrary[i]) { 
-      text += '<li class="inli">' + '<div class="cell">' + myLibrary[i][x] + '</div>' + "</li>";
+      if(x == "tittle"){
+        text += '<li class="inlitittle">' + '<div class="cell">' + myLibrary[i][x] + '</div>' + "</li>";  
+      } else if(x == "author"){
+        text += '<li class="inliauthor">' + '<div class="cell">' + myLibrary[i][x] + '</div>' + "</li>";  
+      }
+      else{
+        text += '<li class="inli">' + '<div class="cell">' + myLibrary[i][x] + '</div>' + "</li>";
+      }
     }
     text += '<li class="inli">' +'<button class="deleteb">Delete</button>' + "</li>" + "</ul>" + "</li>";//add delete button
   }
-  text += "</ul>";
+  text += '</ul>' + '</div>';
   document.getElementById("demoobject").innerHTML = text; // display the information
   document.getElementById("myForm").reset();//reset form imputs to get ready to the new book
   console.log("after showData");
   deletebook();
 }
-
-
 

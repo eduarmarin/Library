@@ -8,17 +8,48 @@ body{
   margin-left: 100px;
   display: flex;
   flex-direction: column;
+  display: flex;
+  justify-content: start;
+  background-color: red;
 }
 nav{
   width: 100%;
-  background-color: bisque;
+}
+nav h2{
+  padding: 10px;
 }
 .container { 
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   min-width: 100%;
   background-color: aquamarine;
+  /* overflow: scroll; */
+}
+.firstrow{   /* table where inputs are showthem    <----------------*/
+  display: flex;
+  flex-direction: row;
+}
+.headers{
+  min-width: 70px;
+  border: 1px solid gray;
+  background-color: gainsboro;
+  justify-content: end;
+  padding-left: 10px;
+}
+.headertittle{
+  width: 300px;
+  border: 1px solid gray;
+  background-color: gainsboro;
+  justify-content: end;
+  padding-left: 10px;
+}
+.headerauthor{
+  width: 150px;
+  border: 1px solid gray;
+  background-color: gainsboro;
+  justify-content: end;
+  padding-left: 10px;
 }
 .table{
   display: flex;
@@ -26,38 +57,142 @@ nav{
   margin: 0px;
   padding: 0px;
   background-color: yellowgreen;
-}
-li { 
-  list-style:none; 
-  display:inline-block; 
-  margin: 0px;
-  gap: 0px;
-}
-.outul{
-  list-style:none; 
-  background-color: brown;
-  padding: 0px;
+  width: 740px;
 }
 .cell { 
   background-color:lightcyan; 
-  min-width:150px; 
-  height: 50px;
+  min-width:auto; 
   border: 1px solid gray;
   margin: 0px;
   padding: 0px;
   gap: 0px;
+  cursor: pointer;
+  display:flex;
+  align-items: flex-start;
 }
-.datas{
-  width: 300px;
+.outul{
+  background-color: brown;
+  padding-left: 0px;
+  margin-left: 0px;
+  width: 720px;        /* this one put width for all  new list line */
+}
+.outli { 
+  list-style:none;  
+  display:inline-block; 
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.inul{
+  background-color: pink; /* this one put left margin each list */
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.inli { 
+  list-style:none; 
+  display:inline-block; 
+  margin: 0px;
+  padding-left: 0px;
+  width: 82px;
+}
+.inlitittle {
+  list-style:none; 
+  display:inline-block; 
+  margin: 0px;
+  padding-left: 0px;
+  width: 311px;
+  height: auto;
+}
+.inliauthor {
+  list-style:none; 
+  display:inline-block; 
+  margin: 0px;
+  padding-left: 0px;
+  width: 163px;
+  height: auto;
+}
+.datas{               /* inputs    <------------------*/
+  width: 80%;
   margin-left: 10px;
+  background-color: violet;
+  padding-left: 10px;
 }
 form{
   display: flex;
   flex-direction: column;
 }
+form h3 {
+  width: 150px;
+}
 input{ 
-  width: 200px; 
+  width: 80%; 
 }
 button { 
-  width: 100px; 
+  width: 80px; 
+}
+
+@media screen and (max-width: 450px){
+  .container{
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    justify-content: start;
+  }
+  nav h2{
+    padding: 0 0 0 10px;
+    margin: 0px;
+  }
+  .general {
+    margin-left: 0px;
+  }
+  input{ 
+    width: 180px; 
+  }
+  .datas{
+    width: 200px;
+  }
+  body{
+    width: 100%;
+    margin: 0;
+    /* text-align: center; */
+  }
+  .table{
+    width: 380px;
+    /* overflow: auto; */
+  }
+  .table h3 {
+    margin: 0 0 0 10px;
+  }
+  form h3{
+    margin: 0 0 0 10px;
+  }
+  .inli {   /* new rows width*/
+    width: 52px;
+    height: auto;
+  }
+  .inlitittle {
+    width: 144px;
+    height: auto;
+  }
+  .inliauthor {
+    width: 79px;
+    height: auto;
+  }
+  .headers{ /* table tittles*/
+    min-width: 40px;
+    height: auto;
+  }
+  .headertittle{
+    min-width: 120px;
+    height: auto;
+  }
+  .headerauthor{
+    min-width: 60px;
+    height: auto;
+  }
+  .outul{
+    width: 382px;        /* this one put width for all  new list line */
+  }
+  .deleteb{
+    width: 60px;
+  }
 }
