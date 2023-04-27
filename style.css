@@ -1,4 +1,4 @@
-body{
+body {
   width: 100%;
   margin: 0 auto;
   /* text-align: center; */
@@ -10,20 +10,23 @@ body{
   flex-direction: column;
   display: flex;
   justify-content: start;
-  background-color: red;
+  /* background-color: red; */
 }
 nav{
   width: 100%;
+  margin: 10px;
+  box-shadow: 5px 8px 12px #888888
 }
 nav h2{
   padding: 10px;
+  margin: 0 0 0 10px;
 }
 .container { 
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   min-width: 100%;
-  background-color: aquamarine;
+  margin: 5px;
   /* overflow: scroll; */
 }
 .firstrow{   /* table where inputs are showthem    <----------------*/
@@ -54,10 +57,13 @@ nav h2{
 .table{
   display: flex;
   flex-direction: column;
-  margin: 0px;
+  margin: 10px;
   padding: 0px;
-  background-color: yellowgreen;
-  width: 740px;
+  background-color: rgb(192, 248, 229);  width: 740px;
+  box-shadow: 5px 10px 15px #888888
+}
+.table h3 {
+  margin: 0 0 0 10px;
 }
 .cell { 
   background-color:lightcyan; 
@@ -71,7 +77,7 @@ nav h2{
   align-items: flex-start;
 }
 .outul{
-  background-color: brown;
+  /* background-color: brown; */
   padding-left: 0px;
   margin-left: 0px;
   width: 720px;        /* this one put width for all  new list line */
@@ -83,7 +89,7 @@ nav h2{
   padding-left: 0px;
 }
 .inul{
-  background-color: pink; /* this one put left margin each list */
+  /* background-colokr: pink; this one put left margin each list */
   margin-left: 0px;
   padding-left: 0px;
 }
@@ -113,15 +119,19 @@ nav h2{
 .datas{               /* inputs    <------------------*/
   width: 80%;
   margin-left: 10px;
-  background-color: violet;
+  background-color: rgb(248, 194, 248);
   padding-left: 10px;
+  box-shadow: 5px 10px 15px #888888
 }
 form{
   display: flex;
   flex-direction: column;
+  
 }
 form h3 {
+
   width: 150px;
+  margin: 0 0 0 10px;
 }
 input{ 
   width: 80%; 
@@ -137,12 +147,17 @@ button {
     padding: 0px;
     justify-content: start;
   }
+  nav {
+    min-width: 100%;
+  }
   nav h2{
+    min-width: 100%;
     padding: 0 0 0 10px;
     margin: 0px;
   }
   .general {
     margin-left: 0px;
+    min-width: 100%;
   }
   input{ 
     width: 180px; 
@@ -155,9 +170,13 @@ button {
     margin: 0;
     /* text-align: center; */
   }
-  .table{
+  .firstrow{
     width: 380px;
+    background-color: pink;
     /* overflow: auto; */
+  }
+  .divcell {
+    width: 370px;
   }
   .table h3 {
     margin: 0 0 0 10px;
@@ -166,23 +185,23 @@ button {
     margin: 0 0 0 10px;
   }
   .inli {   /* new rows width*/
-    width: 52px;
+    width: 57px;
     height: auto;
   }
   .inlitittle {
-    width: 144px;
+    width: 134px;
     height: auto;
   }
   .inliauthor {
-    width: 79px;
+    width: 76px;
     height: auto;
   }
   .headers{ /* table tittles*/
-    min-width: 40px;
+    min-width: 45px;
     height: auto;
   }
   .headertittle{
-    min-width: 120px;
+    min-width: 100px;
     height: auto;
   }
   .headerauthor{

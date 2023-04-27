@@ -23,14 +23,15 @@ function Book() {
     showData () ;
   }
   // deletebook ();
-  console.log("after book");
-  return (myLibrary.length);
+  //console.log(read);
+  return(read);
 }
+
 function deletebook(){
   const nodes = document.getElementsByClassName("deleteb");//find the index from the book to delete end in the 'bind'
-  console.log("nodes " + nodes.length);
+  console.log("nodes " + nodes);
   for (let i = 0; i < myLibrary.length; i++) {
-    console.log("inside also")
+    console.log("inside delete")
     nodes[i].addEventListener('click', function (index) {
       console.log('index ' + index);
       myLibrary.splice( index, 1);
@@ -39,17 +40,36 @@ function deletebook(){
     }.bind(null, i)); 
   }
 }
+function toggleyesnot () {
+  var read2 = document.getElementsByClassName("readdiv"); 
+  console.log("toggle list " + read2.length)
+  for (let i = 0; i < read2.length ; i++) {  // myLibrary.length
+    console.log("inside toggle")
+    read2[i].addEventListener('click', function (event) {
+      console.log("this this " + myLibrary[i]["read"]);
+      if(myLibrary[i]["read"] == "yes"){
+        myLibrary[i]["read"] = "Not" ;
+      } else if (myLibrary[i]["read"] == "Not"){
+        myLibrary[i]["read"] = "Yes" ;
+      } else {
+        myLibrary[i]["read"] = "Not" ;
+      }
+      showData ();
+    }); //.bind(null, i)
+  }
+}
 function showData () {
   text = '<div class="divcell">' + '<ul class="outul">';  
   for (let i = 0; i < myLibrary.length; i++) {// this loop and the next inside put the information to display it
     text += '<li class="outli">' + '<ul class="inul">';
     for (let x in myLibrary[i]) { 
-      if(x == "tittle"){
+      if (x == "tittle") {
         text += '<li class="inlitittle">' + '<div class="cell">' + myLibrary[i][x] + '</div>' + "</li>";  
-      } else if(x == "author"){
+      } else if (x == "author"){
         text += '<li class="inliauthor">' + '<div class="cell">' + myLibrary[i][x] + '</div>' + "</li>";  
-      }
-      else{
+      } else if (x == "read"){
+        text += '<li class="inli">' + '<div class="cell readdiv" >' + myLibrary[i][x] + '</div>' + "</li>";  
+      } else {
         text += '<li class="inli">' + '<div class="cell">' + myLibrary[i][x] + '</div>' + "</li>";
       }
     }
@@ -60,5 +80,7 @@ function showData () {
   document.getElementById("myForm").reset();//reset form imputs to get ready to the new book
   console.log("after showData");
   deletebook();
+  toggleyesnot();
 }
 
+// onclick="toggleyesnot()"
